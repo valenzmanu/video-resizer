@@ -17,7 +17,7 @@ assert len(new_res) == 2
 print(f"Loading {input_video}")
 cap = cv2.VideoCapture(input_video)
 fps = cap.get(cv2.CAP_PROP_FPS)
-original_res = (width, height) = (cap.get(3), cap.get(4))
+original_res = (width, height) = (int(cap.get(3)), int(cap.get(4)))
 print(f"Loaded video file {input_video} with res {original_res} @ {fps} fps")
 print(f"Changing {input_video} resolution: {original_res} --> {new_res} @ {fps} fps")
 
